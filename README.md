@@ -1,16 +1,40 @@
-# todo
 
-A new Flutter project.
+# ToDo app
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Language:** Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Framework:** Flutter
+
+**Backend:** Cloud Firestore
+
+## Run Locally
+
+Clone app
+
+```bash
+git clone https:github.com/hasti1109/todo-flutter
+```
+
+Navigate to project directory
+
+```bash
+cd todo-flutter
+```
+
+Get dependencies
+
+```bash
+flutter pub get
+```
+
+Run app locally
+
+```bash
+flutter run --debug
+```
+```
+
