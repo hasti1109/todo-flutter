@@ -54,7 +54,7 @@ class NewTaskPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 200.w,
+                width: 250.w,
                 height: 190.h,
                 child: Card(
                   elevation: 10,

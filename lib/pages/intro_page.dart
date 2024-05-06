@@ -67,7 +67,7 @@ class IntroPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
-                padding: EdgeInsets.symmetric(horizontal:20.w, vertical: 20.h),
+                padding: EdgeInsets.symmetric(horizontal:20.w, vertical: 18.h),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

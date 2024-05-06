@@ -26,8 +26,4 @@ class FirestoreService{
     return tasks.doc(docID).delete();
   }
 
-  Future<int> getIncompleteTasksCount() async{
-    QuerySnapshot snapshot = await tasks.where('taskCompleted', isEqualTo: false).get();
-    return snapshot.size;
-  }
 }

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo/widgets/header.dart';
+import 'package:todo/widgets/no_task_widget.dart';
 import 'package:todo/widgets/todo_tile.dart';
 
 import '../services/firestore.dart';
@@ -37,7 +37,8 @@ class _TasksPageState extends State<TasksPage> {
             child: StreamBuilder<QuerySnapshot>(
               stream: firestoreService.getTasksStream(),
               builder: (context, snapshot) {
-                if (snapshot.hasData){
+
+                if (snapshot.hasData && snapshot.data!.docs.isNotEmpty){
                   List tasksList = snapshot.data!.docs;
 
                   return ListView.builder(
@@ -62,7 +63,7 @@ class _TasksPageState extends State<TasksPage> {
                   );
                 }
                 else{
-                  return Center(child: Text('you have no tasks.'));
+                  return Center(child: NoTasksWidget());
                 }
               }
             ),

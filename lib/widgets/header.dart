@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../services/firestore.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -12,15 +11,6 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
-  final FirestoreService firestoreService = FirestoreService();
-  int numberOfUnifinishedTasks = 5;
-
-  void changeCount() async{
-    int count = await firestoreService.getIncompleteTasksCount();
-    setState(() {
-      numberOfUnifinishedTasks = count;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +29,6 @@ class _HeaderState extends State<Header> {
           ),
 
           SizedBox(height: 10.h,),
-
-          Text(
-            "You have ${numberOfUnifinishedTasks} unfinished tasks.",
-            style: GoogleFonts.ubuntu(
-                fontSize: 15.spMin,
-            ),
-          )
         ],
       ),
     );
