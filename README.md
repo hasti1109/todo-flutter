@@ -36,5 +36,3 @@ Run app locally
 ```bash
 flutter run --debug
 ```
-```
-
